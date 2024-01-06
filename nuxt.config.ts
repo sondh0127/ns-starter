@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     'radix-vue/nuxt',
-    '@nuxthq/studio'
+    '@nuxthq/studio',
+    'nuxt-icon'
   ],
   macros: {
     betterDefine: false,

@@ -18,7 +18,8 @@
     "@unocss/nuxt": "^0.58.3",
     "@vue-macros/nuxt": "^1.9.19",
     "class-variance-authority": "^0.7.0",
-    "nuxt": "^3.9.0"
+    "nuxt": "^3.9.0",
+    "nuxt-icon": "^0.6.8"
   },
   "dependencies": {
     "radix-vue": "^1.2.6"
