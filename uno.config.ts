@@ -9,7 +9,13 @@ import {
 } from 'unocss'
 import { presetShadcn } from './preset.shadcn'
 
+
+const colors = ['primary', 'secondary', 'destructive', 'muted', 'accent']
+
 export default defineConfig({
+  safelist: [
+    ...colors.map((item) => `text-${item}`),
+  ],
   shortcuts: [
     ['flex-center', 'flex items-center justify-center'],
   ],

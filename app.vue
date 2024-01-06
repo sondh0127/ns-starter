@@ -14,7 +14,7 @@ body,
 #__nuxt {
   height: 100dvh;
   font-family: 'Inter', sans-serif;
-  @apply p-0 m-0 antialiased;
+  @apply p-0 m-0 antialiased text-secondary;
 }
 
 :root {
@@ -36,7 +36,7 @@ body,
   --primary: 27 98% 56%;
   --primary-foreground: 210 40% 98%;
 
-  --secondary: 210 40% 96.1%;
+  --secondary: 215 27.91% 16.86%;
   --secondary-foreground: 222.2 47.4% 11.2%;
 
   --accent: 210 40% 96.1%;
@@ -72,7 +72,7 @@ html.dark {
   --primary: 27, 98%, 56%;
   --primary-foreground: 210, 40%, 98%;
 
-  --secondary: 222.2 47.4% 11.2%;
+  --secondary: 217.89 10.61% 64.9%;
   --secondary-foreground: 210 40% 98%;
 
   --destructive: 0 63% 31%;
