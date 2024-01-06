@@ -32,7 +32,7 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
 
 <template>
   <div class="mx-auto container">
-    <slot/>
+    <slot />
     <div class="flex gap-12px mt-5 bg-accent px-24px py-32px rounded-8px ">
 
       <div class="grid gap-12px">
@@ -40,22 +40,22 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
           :class="[i === selectedIndex ? 'ring-3px ring-primary' : '']" @click="selectedIndex = i">
           <NuxtImg class="absolute inset-0" :src="item.thumb" />
           <div class="absolute bottom-2 right-2 text-white font-bold">
-            <p>{{ item.reso }}</p>
+            <div>{{ item.reso }}</div>
           </div>
         </div>
       </div>
       <div :key="selectedIndex" class="flex-1 relative grid grid-cols-3 gap-12px">
         <div class="col-span-2">
           <div class="mb-2 text-base">
-            <p class="font-bold text-primary text-lg">
+            <div class="font-bold text-primary text-lg">
               {{ res[0].name }}
-            </p>
-            <p>
+            </div>
+            <div>
               {{ videos[selectedIndex].reso2 }}
-            </p>
-            <p class="font-bold">
+            </div>
+            <div class="font-bold">
               {{ res[0].vbr_size }}MB
-            </p>
+            </div>
 
           </div>
           <VideoPlayer aspect-ratio="16:9" :poster="videos[selectedIndex].thumb" :controls="true" :src="video"
@@ -81,39 +81,39 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
                 <div
                   class="text-sm bg-white hidden group-hover:block shadow transition-all text-black px-4 py-1.5 rounded-3 absolute top-32px left-1/2 translate-x-[calc(-100%-48px)]">
                   <div class="flex justify-between gap-8">
-                    <p>
+                    <div>
                       Standard Static
-                    </p>
-                    <p class="font-bold ">
-                    <p>{{ res[0].vbr_size }}MB</p>
-                    </p>
+                    </div>
+                    <div class="font-bold ">
+                      <div>{{ res[0].vbr_size }}MB</div>
+                    </div>
                   </div>
                   <div class="flex justify-between gap-8">
-                    <p>
+                    <div>
                       Encoding Seting
-                    </p>
-                    <p class="font-bold">
+                    </div>
+                    <div class="font-bold">
                       {{ videos[selectedIndex].reso3 }} H.264
-                    </p>
+                    </div>
                   </div>
                 </div>
 
                 <div
                   class="text-sm bg-white hidden group-hover:block shadow transition-all text-black px-4 py-1.5 rounded-3 absolute top-32px left-1/2 translate-x-[calc(48px)]">
                   <div class="flex justify-between gap-8">
-                    <p class="font-bold text-primary">
+                    <div class="font-bold text-primary">
                       Sigma ncode
-                    </p>
-                    <p class="font-bold text-primary">
-                    <p>{{ res[0].pte_size }}MB</p>
-                    </p>
+                    </div>
+                    <div class="font-bold text-primary">
+                      <div>{{ res[0].pte_size }}MB</div>
+                    </div>
                   </div>
                   <div class="flex justify-between gap-8">
-                    <p>
-                      Per-Title Encoding </p>
-                    <p class="font-bold">
+                    <div>
+                      Per-Title Encoding </div>
+                    <div class="font-bold">
                       {{ videos[selectedIndex].reso3 }} H.264
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -123,27 +123,27 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
 
         <div class="flex-shrink-0 mt-10">
           <div>
-            <p class="text-lg text-primary font-bold">
+            <div class="text-lg text-primary font-bold">
               Bitrate
-            </p>
+            </div>
             <BitrateEchart class="mt-2" :current-index="currentIndex" :defaultData="defaultData" :pteData="pteData" />
           </div>
           <div class="mt-4">
-            <p class="text-lg text-primary font-bold">
+            <div class="text-lg text-primary font-bold">
               Performance
-            </p>
+            </div>
             <div class="text-sm font-500 mt-2">
               <div class="flex justify-between gap-8">
-                <p>Per Title Segment Data</p>
-                <p>{{ res[0].pte_size }}MB</p>
+                <div>Per Title Segment Data</div>
+                <div>{{ res[0].pte_size }}MB</div>
               </div>
               <div class="flex justify-between gap-8">
-                <p>Default Segment Data</p>
-                <p>{{ res[0].vbr_size }}MB</p>
+                <div>Default Segment Data</div>
+                <div>{{ res[0].vbr_size }}MB</div>
               </div>
               <div class="flex justify-between gap-8">
-                <p>Saving</p>
-                <p>{{ Math.max(Math.round((res[0].vbr_size - res[0].pte_size) / res[0].vbr_size * 100), 0) }}%</p>
+                <div>Saving</div>
+                <div>{{ Math.max(Math.round((res[0].vbr_size - res[0].pte_size) / res[0].vbr_size * 100), 0) }}%</div>
               </div>
             </div>
           </div>
