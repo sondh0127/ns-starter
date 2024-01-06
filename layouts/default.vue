@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  titleTemplate: `%s · ${appName}`,
+  titleTemplate: '%s · Sigma Streaming',
   meta: [
     { name: 'twitter:card', content: 'summary_large_image' },
   ],
