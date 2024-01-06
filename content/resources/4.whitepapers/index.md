@@ -1,6 +1,6 @@
 ---
-title: 'Blog Articles'
+title: 'Whitepapers'
 icon: carbon:blog
 ---
-# Blog Articles
+# Whitepapers
 :icon{name="carbon:blog"}
