@@ -119,4 +119,8 @@ h6 {
 p, ul, ol, pre {
   @apply my-1em mx-0 leading-[1.75];
 }
+
+em {
+  @apply text-primary not-italic;
+}
 </style>
