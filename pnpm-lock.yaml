@@ -10,6 +10,12 @@ dependencies:
     version: 1.2.6(react@18.2.0)(vue@3.4.5)
 
 devDependencies:
+  '@iconify-json/fa-brands':
+    specifier: ^1.1.8
+    version: 1.1.8
+  '@iconify-json/ri':
+    specifier: ^1.1.18
+    version: 1.1.18
   '@nuxt/content':
     specifier: ^2.10.0
     version: 2.10.0(nuxt@3.9.1)(rollup@4.9.4)(vue@3.4.5)
@@ -675,6 +681,18 @@ packages:
       - react
       - vue
     dev: false
+
+  /@iconify-json/fa-brands@1.1.8:
+    resolution: {integrity: sha512-0HVT1+7hDww2vTtGyX4maUyiEXDYd6CK57bOGJ3hc3fjmXpMI9QKdej21pPSv1jBZ2nGzTlg8WJ2yNtN88/lFQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ri@1.1.18:
+    resolution: {integrity: sha512-/gm7OrzhX6iOklhSnhK102unCzA+5wB0OJzXPgvpMr19VOD+dkXzIxEAbGu5lhFCxgn5TJ2jJLc8DtvnZWsyrw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -3612,6 +3630,7 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    requiresBuild: true
     dev: true
 
   /color-string@1.9.1:
@@ -5588,6 +5607,7 @@ packages:
 
   /mdn-data@2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
+    requiresBuild: true
     dev: true
 
   /mdurl@2.0.0:
