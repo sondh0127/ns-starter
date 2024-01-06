@@ -19,7 +19,9 @@ const { title, subtitle } = definePropsRefs<{
         <p v-if="subtitle" class="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
           {{ subtitle }}
         </p>
-        <ContentDoc class="prose-li-sigma prose-gray" />
+        <div class="prose-li-sigma prose-gray">
+          <slot />
+        </div>
       </div>
     </div>
     <div class="relative w-full flex items-center justify-center" xl="w-1/2">
