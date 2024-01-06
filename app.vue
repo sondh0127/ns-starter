@@ -97,27 +97,33 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
 }
 
 h1 {
-  @apply mt-3 text-4xl font-700 lg:text-5xl xl:text-6xl;
+  @apply text-4xl font-700 lg:text-5xl xl:text-6xl;
+  @apply mb-7 mt-5;
 }
 
 h2 {
-  @apply mt-3 text-4xl font-700 lg:text-5xl;
+  @apply text-4xl font-700 lg:text-5xl;
+  @apply mb-7 mt-5;
 }
 
 h3 {
-  @apply mt-3 text-3xl font-700 lg:text-4xl;
+  @apply text-3xl font-700 lg:text-4xl;
+  @apply mb-7 mt-5;
 }
 
 h4 {
-  @apply mt-3 text-2xl font-600 lg:text-3xl;
+  @apply text-2xl font-600 lg:text-3xl;
+  @apply mb-3 mt-2;
 }
 
 h5 {
-  @apply mt-3 text-xl font-600 lg:text-2xl;
+  @apply text-xl font-600 lg:text-2xl;
+  @apply mb-3 mt-2;
 }
 
 h6 {
-  @apply mt-3 text-lg font-500 lg:text-xl;
+  @apply text-lg font-500 lg:text-xl;
+  @apply mb-3 mt-2;
 }
 
 p, ul, ol, pre {
@@ -130,6 +136,10 @@ em {
 
 section {
   @apply mx-auto container my-6 xl:my-8;
+}
+
+section>img {
+  @apply py-10 px-10;
 }
 
 [center=true] {

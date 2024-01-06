@@ -4,7 +4,6 @@ const currentTrigger = ref('1')
 const { data: products } = await useAsyncData('products', () => queryContent('products').find())
 const { data: engines } = await useAsyncData('engines', () => queryContent('engines').find())
 const { data: resources } = await useAsyncData('resources', () => queryContent('resources').find())
-console.log('[LOG] ~ file: AppNavbar.vue:8 ~ resources:', resources)
 const appConfig = useAppConfig()
 const hasFeatureBlog = computed(() => appConfig.featuredBlog)
 </script>

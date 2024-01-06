@@ -33,7 +33,7 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
 <template>
   <section>
     <slot />
-    <div class="flex gap-12px mt-5 bg-accent px-24px py-32px rounded-8px ">
+    <div class="flex gap-12px bg-accent px-24px py-32px rounded-8px ">
 
       <div class="grid gap-12px">
         <div v-for="(item, i) in videos" class="relative w-160px h-90px rounded-8px of-hidden cursor-pointer"
