@@ -9,6 +9,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     '@unocss/nuxt',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/i18n',
+    'radix-vue/nuxt',
   ],
   macros: {
     betterDefine: false,
@@ -18,8 +20,24 @@ export default defineNuxtConfig({
   ],
   googleFonts: {
     families: {
-      Inter: ['100..800'],
+      Inter: '100..800'
     },
     download: true,
+  },
+  i18n: {
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    locales: [
+      {
+        code: 'en',
+        file: 'en.json',
+      },
+      {
+        code: 'vi',
+        file: 'vi.json',
+      },
+    ],
+    lazy: true,
+    langDir: 'locales',
   },
 })
