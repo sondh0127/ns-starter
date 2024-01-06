@@ -11,10 +11,11 @@ import { presetShadcn } from './preset.shadcn'
 
 
 const colors = ['primary', 'secondary', 'destructive', 'muted', 'accent']
-
+const align = ['center']
 export default defineConfig({
   safelist: [
     ...colors.map((item) => `text-${item}`),
+    ...align.map((item) => `text-${item}`),
   ],
   shortcuts: [
     ['flex-center', 'flex items-center justify-center'],

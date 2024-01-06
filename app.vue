@@ -92,6 +92,10 @@ h6 {
   @apply leading-snug lg:leading-tight xl:!leading-tight tracking-tight text-gray-800 dark:text-white;
 }
 
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+  @apply block;
+}
+
 h1 {
   @apply mt-3 text-4xl font-700 lg:text-5xl xl:text-6xl;
 }
@@ -122,5 +126,21 @@ p, ul, ol, pre {
 
 em {
   @apply text-primary not-italic;
+}
+
+section {
+  @apply mx-auto container my-6 xl:my-8;
+}
+
+[center=true] {
+  @apply block text-center;
+}
+
+[left=true] {
+  @apply block text-left;
+}
+
+[right=true] {
+  @apply block text-right;
 }
 </style>

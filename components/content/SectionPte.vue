@@ -31,7 +31,7 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
 </script>
 
 <template>
-  <div class="mx-auto container">
+  <section>
     <slot />
     <div class="flex gap-12px mt-5 bg-accent px-24px py-32px rounded-8px ">
 
@@ -150,7 +150,7 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style>
