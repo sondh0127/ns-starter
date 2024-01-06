@@ -1,11 +1,16 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <div>
-    <NuxtPage />
-  </div>
+  <NuxtLayout>
+    <div>
+      <NuxtLoadingIndicator />
+      <NuxtPage />
+    </div>
+  </NuxtLayout>
 </template>
 
 <style>
-
 html,
 body,
 #__nuxt {
