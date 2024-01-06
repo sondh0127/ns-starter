@@ -3,15 +3,6 @@ import { field, group } from '@nuxthq/studio/theme'
 
 export default defineNuxtSchema({
   appConfig: {
-    categories: field({
-      type: 'array',
-      title: 'Categories',
-      description: 'Categories to display in the studio',
-      icon: 'i-mdi-format-list-bulleted',
-      items: {
-        type:'string'
-      }
-    }),
     header: group({
       title: 'Header',
       description: 'Header configuration',
