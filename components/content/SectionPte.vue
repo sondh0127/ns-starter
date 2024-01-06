@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { VideoPlayer } from '@videojs-player/vue'
-const { title, videos } = definePropsRefs<{
-  title?: string
+const { videos } = definePropsRefs<{
   videos: any[]
 }>()
 
@@ -33,10 +32,7 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
 
 <template>
   <div class="mx-auto container">
-    <h3 v-if="title"
-      class="mt-3 max-w-2xl text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight dark:text-white">
-      {{ title }}
-    </h3>
+    <slot/>
     <div class="flex gap-12px mt-5 bg-accent px-24px py-32px rounded-8px ">
 
       <div class="grid gap-12px">

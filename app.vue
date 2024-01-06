@@ -82,4 +82,41 @@ html.dark {
 
   --radius: 0.5rem;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-snug lg:leading-tight xl:!leading-tight tracking-tight text-gray-800 dark:text-white;
+}
+
+h1 {
+  @apply mt-3 text-4xl font-700 lg:text-5xl xl:text-6xl;
+}
+
+h2 {
+  @apply mt-3 text-4xl font-700 lg:text-5xl;
+}
+
+h3 {
+  @apply mt-3 text-3xl font-700 lg:text-4xl;
+}
+
+h4 {
+  @apply mt-3 text-2xl font-600 lg:text-3xl;
+}
+
+h5 {
+  @apply mt-3 text-xl font-600 lg:text-2xl;
+}
+
+h6 {
+  @apply mt-3 text-lg font-500 lg:text-xl;
+}
+
+p, ul, ol, pre {
+  @apply my-1em mx-0 leading-[1.75];
+}
 </style>
