@@ -11,12 +11,13 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     'radix-vue/nuxt',
+    '@nuxthq/studio'
   ],
   macros: {
     betterDefine: false,
   },
   css: [
-    '@unocss/reset/tailwind-compat.css'
+    '@unocss/reset/tailwind.css'
   ],
   googleFonts: {
     families: {
