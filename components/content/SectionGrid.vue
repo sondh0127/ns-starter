@@ -18,7 +18,7 @@ const { col } = definePropsRefs<{
       </template>
     </SectionTitle>
     <div :style="{ '--col': col ?? 2, '--gap': gap ? gap + 'px' : '32px' }"
-      class="grid grid-cols-[repeat(var(--col),minmax(0,1fr))] gap-[var(--gap)] py-3"
+      class="grid grid-cols-[repeat(var(--col),minmax(0,1fr))] gap-[var(--gap)] py-3 px-3"
       :class="[bg ? 'bg-gray-100 dark:bg-trueGray-800 rounded-xl' : '']">
 
       <slot />

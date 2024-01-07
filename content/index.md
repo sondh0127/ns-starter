@@ -165,32 +165,32 @@ TESTIMONIALS
 ::
 
 ::section-grid{bg}
-  ::grid-item{icon=""}
+  ::grid-item{icon="material-symbols:sensors"}
   #subtitle
   We’re inspired by our customers’s ideas and are fun to work with
   ::
 
-  ::grid-item{icon=""}
+  ::grid-item{icon="material-symbols:sensors"}
   #subtitle
   Our video cloud platform is designed for unlimited scale
   ::
 
-  ::grid-item{icon=""}
+  ::grid-item{icon="material-symbols:sensors"}
   #subtitle
   We have the broadest video technology stack: Real-time, Live, VOD
   ::
 
-  ::grid-item{icon=""}
+  ::grid-item{icon="material-symbols:sensors"}
   #subtitle
   Our accessible products drive engagement and interactivity for all
   ::
 
-  ::grid-item{icon=""}
+  ::grid-item{icon="material-symbols:sensors"}
   #subtitle
   We build everything on our video APIs, and many tech companies use them too
   ::
 
-  ::grid-item{icon=""}
+  ::grid-item{icon="material-symbols:sensors"}
   #subtitle
   Our products are loved by customers and easy to use
   ::
