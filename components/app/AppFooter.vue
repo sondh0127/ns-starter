@@ -9,9 +9,9 @@ const { data: resources } = await useAsyncData('resources', () => queryContent('
   <div class="mt-20 border-b border-t border-gray-200 dark:border-trueGray-700">
     <footer class="grid grid-cols-4 gap-10 px-10 py-10 text-15px container">
       <div class="flex flex-col gap-8px">
-        <p class="mb-8px cursor-default font-500 text-primary">
+        <div class="mb-8px cursor-default font-500 text-primary">
           Company
-        </p>
+        </div>
         <NuxtLink hover="underline underline-primary text-primary" to="https://thudomultimedia.com/">
           About us
         </NuxtLink>
@@ -21,9 +21,9 @@ const { data: resources } = await useAsyncData('resources', () => queryContent('
       </div>
 
       <div class="flex flex-col gap-8px">
-        <p class="mb-8px cursor-default font-500 text-primary">
+        <div class="mb-8px cursor-default font-500 text-primary">
           Resources
-        </p>
+        </div>
         <NuxtLink
           v-for="item in resources" :key="item._path" hover="underline underline-primary text-primary"
           :to="item._path"
@@ -33,9 +33,9 @@ const { data: resources } = await useAsyncData('resources', () => queryContent('
       </div>
 
       <div class="flex flex-col gap-8px">
-        <p class="mb-8px cursor-default font-500 text-primary">
+        <div class="mb-8px cursor-default font-500 text-primary">
           Products
-        </p>
+        </div>
 
         <NuxtLink
           v-for="item in products" :key="item._path" hover="underline underline-primary text-primary"
@@ -46,9 +46,9 @@ const { data: resources } = await useAsyncData('resources', () => queryContent('
       </div>
 
       <div class="flex flex-col gap-8px">
-        <p class="mb-8px cursor-default font-500 text-primary">
+        <div class="mb-8px cursor-default font-500 text-primary">
           Engines
-        </p>
+        </div>
 
         <NuxtLink
           v-for="item in engines" :key="item._path" hover="underline underline-primary text-primary"
@@ -65,18 +65,18 @@ const { data: resources } = await useAsyncData('resources', () => queryContent('
         <div>
           <a rel="noopener" target="_blank" class="max-w-250px flex">
             <img src="/thudo_logo.png" alt="logo" class="mr-8px h-50px w-100px">
-            <p class="select-none text-13px font-600 text-gray-400 hover:text-primary">
+            <div class="select-none text-13px font-600 text-gray-400 hover:text-primary">
               Thu Do Multimedia Communications Joint Stock Company
-            </p>
+            </div>
           </a>
 
           <div class="mt-8px text-13px text-gray-500">
-            <p>
+            <div>
               10th floor, No 48 Le Van Luong
-            </p>
-            <p>
+            </div>
+            <div>
               N1 New Urban, Nhan Chinh Ward, Thanh Xuan District, Hanoi, Vietnam
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -90,15 +90,15 @@ const { data: resources } = await useAsyncData('resources', () => queryContent('
         </div>
 
         <div class="mt-8px text-13px text-gray-500">
-          <p>
+          <div>
             Tel: (+84) 4 3668 7038
-          </p>
-          <p>
+          </div>
+          <div>
             Email: thudojsc@gviet.vn
-          </p>
-          <p>
+          </div>
+          <div>
             2023 by Thu Do Multimedia. All rights reserved
-          </p>
+          </div>
         </div>
       </div>
     </footer>

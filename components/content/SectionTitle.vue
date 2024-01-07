@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineProps<{
-  align?: 'left'
+  left?: boolean
 }>()
 
 defineSlots<{
@@ -12,7 +12,7 @@ defineSlots<{
 
 <template>
   <div class=""
-    :class="`container flex w-full flex-col mt-10 ${align === 'left' ? '' : 'items-center justify-center text-center'}`">
+    :class="`container flex w-full flex-col mt-10 ${left ? '' : 'items-center justify-center text-center'}`">
     <div class="text-lg font-bold tracking-wider uppercase text-primary">
       <ContentSlot :use="$slots.subtitle" unwrap="p" />
     </div>
