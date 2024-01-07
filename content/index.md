@@ -1,12 +1,20 @@
-# Nuxt Content
-
-This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
-
-Try to navigate to [/about](/about). These 2 pages are rendered by the `pages/[...slug].vue` component.
-
 ---
-
-Look at the [Content documentation](https://content.nuxtjs.org/) to learn more.
-
+title: Home
+description: 'Sigma Streaming Home'
 ---
-[/sigma-encoding](/engines/sigma-encoding)
+::section-hero{image="/Group_1321314848.png"}
+#title
+  Powering the Streaming experience
+#### Unlocking business value with reliable streaming from a trusted partner
+
+- Stream **seamlessly**. Interact and Monetize. Elevate your content.
+- Unlock potential: Secure hosting, flawless events, API integration. Revenue awaits.
+- Empower your stream: Transcode, Interact, Monetize. Experience the future.
+
+::button-link{href="/get-in-touch"}
+Get Demo
+::
+::
+
+###### [CORE COMPONENTS]{center}
+### [Unleashing the Potential in Sigma Streaming Platform]{center}
