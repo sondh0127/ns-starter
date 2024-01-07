@@ -93,8 +93,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  @apply leading-snug lg:leading-tight xl:!leading-tight tracking-tight text-gray-800 dark:text-white;
+h6, .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
+  @apply leading-snug lg:leading-tight xl:!leading-tight tracking-tight;
 }
 
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
@@ -102,33 +102,27 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
 }
 
 h1 {
-  @apply text-4xl font-700 lg:text-5xl xl:text-6xl;
-  @apply mb-7 mt-5;
+  @apply text-4xl lg:text-5xl xl:text-6xl;
 }
 
 h2 {
-  @apply text-4xl font-700 lg:text-5xl;
-  @apply mb-7 mt-5;
+  @apply text-4xl lg:text-5xl;
 }
 
 h3 {
-  @apply text-3xl font-700 lg:text-4xl;
-  @apply mb-7 mt-5;
+  @apply text-3xl lg:text-4xl;
 }
 
 h4 {
-  @apply text-2xl font-600 lg:text-3xl;
-  @apply mb-3 mt-2;
+  @apply text-2xl lg:text-3xl;
 }
 
 h5 {
-  @apply text-xl font-600 lg:text-2xl;
-  @apply mb-3 mt-2;
+  @apply text-xl lg:text-2xl;
 }
 
 h6 {
-  @apply text-lg font-500 lg:text-xl;
-  @apply mb-3 mt-2;
+  @apply text-lg lg:text-xl;
 }
 
 p, ul, ol, pre {

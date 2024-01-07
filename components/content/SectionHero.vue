@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-const { } = definePropsRefs<{
-  image: string
-}>()
 </script>
 
 <template>
@@ -9,12 +6,20 @@ const { } = definePropsRefs<{
     xl="flex flex-wrap">
     <div class="w-full flex items-center" xl="w-1/2">
       <div class="grid mx-auto mb-8 justify-items-center" xl="max-w-2xl justify-items-start">
-
+        <h1 class="text-4xl font-bold leading-snug tracking-tight text-gray-800" lg="text-5xl leading-tight"
+          xl="text-6xl leading-tight" dark="text-white">
+          <ContentSlot :use="$slots.title" unwrap="p" />
+        </h1>
+        <h2 class="pt-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
+          <ContentSlot :use="$slots.subtitle" unwrap="p" />
+        </h2>
         <slot />
       </div>
     </div>
     <div class="relative w-full flex items-center justify-center" xl="w-1/2" lg="block w-1/2">
-      <NuxtImg :src="image" class="absolute inset-0 h-full w-full object-scale-down" />
+      <Slot class="absolute inset-0 h-full w-full object-scale-down">
+        <ContentSlot :use="$slots.image" unwrap="p" />
+      </Slot>
     </div>
   </div>
 </template>
