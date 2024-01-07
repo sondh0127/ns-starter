@@ -6,7 +6,7 @@ const { icon } = definePropsRefs<{
 
 <template>
   <div class="mt-12 flex items-center space-x-4 first:mt-0">
-    <div class="mt-1 size-70px flex flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
+    <div v-if="icon" class="mt-1 size-70px flex flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
       <Icon :name="icon ?? 'i-ri:article-line'" class="h-48px w-48px text-primary" />
     </div>
     <div>
