@@ -9,5 +9,6 @@ export default defineAppConfig({
   socials: {
     github: 'larbish',
     twitter: '_larbish'
-  }
+  },
+  docsLink: 'https://github.com/docs',
 })

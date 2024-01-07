@@ -77,13 +77,10 @@ const hasFeatureBlog = computed(() => appConfig.featuredBlog)
                     <NuxtImg :image="config?.featuredBlog.mainImage" />
                   </div>
                   <div class="px-2 py-2">
-                    <NuxtLink
-                      class="font-medium dark:text-white"
-                      :to="getPath('/resources', 'blogs', config?.featuredBlog.slug.current)"
-                    >
+                    <NuxtLink class="font-medium dark:text-white"
+                      :to="getPath('/resources', 'blogs', config?.featuredBlog.slug.current)">
                       <span
-                        class="transition-[background-size] cursor-default bg-[length:0px_10px] from-primary-300 to-primary-200 bg-gradient-to-r bg-left-bottom bg-no-repeat duration-500 hover:bg-[length:100%_10px] hover:bg-[length:100%_3px] dark:from-primary-600 dark:to-primary-700"
-                      >
+                        class="transition-[background-size] cursor-default bg-[length:0px_10px] from-primary-300 to-primary-200 bg-gradient-to-r bg-left-bottom bg-no-repeat duration-500 hover:bg-[length:100%_10px] hover:bg-[length:100%_3px] dark:from-primary-600 dark:to-primary-700">
                         {{ config?.featuredBlog.title }}
                       </span>
                     </NuxtLink>
@@ -101,9 +98,12 @@ const hasFeatureBlog = computed(() => appConfig.featuredBlog)
             </SNavigationMenuContent>
           </SNavigationMenuItem>
           <SNavigationMenuItem>
-            <SNavigationMenuLink href="/docs" class="navigation-menu-trigger">
+            <NuxtLink :to="appConfig.docsLink" external>
+              <SNavigationMenuLink  class="navigation-menu-trigger">
               Documentation
             </SNavigationMenuLink>
+            </NuxtLink>
+
           </SNavigationMenuItem>
         </SNavigationMenuList>
       </div>
