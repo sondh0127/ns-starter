@@ -1,6 +1,8 @@
 <script lang="ts" setup>
-const { data: pages, pending: pendingPage } = await useSanityData(allPageQuery)
-const { data: categories, pending } = await useSanityData(allCategoryQuery)
+const { data: products } = await useAsyncData('products', () => queryContent('products').find())
+const { data: engines } = await useAsyncData('engines', () => queryContent('engines').find())
+const { data: resources } = await useAsyncData('resources', () => queryContent('resources').find())
+
 </script>
 
 <template>
@@ -23,8 +25,8 @@ const { data: categories, pending } = await useSanityData(allCategoryQuery)
           Resources
         </p>
         <NuxtLink
-          v-for="item in categories" :key="item.slug.current" hover="underline underline-primary text-primary"
-          :to="getPath('/resources', item.slug.current)"
+          v-for="item in resources" :key="item._path" hover="underline underline-primary text-primary"
+          :to="item._path"
         >
           {{ item.title }}
         </NuxtLink>
@@ -36,8 +38,8 @@ const { data: categories, pending } = await useSanityData(allCategoryQuery)
         </p>
 
         <NuxtLink
-          v-for="item in pages?.products" :key="item.slug.current" hover="underline underline-primary text-primary"
-          :to="getPath('/products', item.slug.current)"
+          v-for="item in products" :key="item._path" hover="underline underline-primary text-primary"
+          :to="item._path"
         >
           {{ item.title }}
         </NuxtLink>
@@ -49,8 +51,8 @@ const { data: categories, pending } = await useSanityData(allCategoryQuery)
         </p>
 
         <NuxtLink
-          v-for="item in pages?.engines" :key="item.slug.current" hover="underline underline-primary text-primary"
-          :to="getPath('/products', item.slug.current)"
+          v-for="item in engines" :key="item._path" hover="underline underline-primary text-primary"
+          :to="item._path"
         >
           {{ item.title }}
         </NuxtLink>
@@ -84,7 +86,7 @@ const { data: categories, pending } = await useSanityData(allCategoryQuery)
           <div class="flex gap-3">
             <AppSocialIcons />
           </div>
-          <DarkSwitch />
+          <AppDarkSwitch />
         </div>
 
         <div class="mt-8px text-13px text-gray-500">

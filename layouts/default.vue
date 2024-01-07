@@ -10,5 +10,5 @@ useHead({
 <template>
   <AppNavbar />
   <slot />
-  <!-- <AppFooter /> -->
+  <AppFooter />
 </template>

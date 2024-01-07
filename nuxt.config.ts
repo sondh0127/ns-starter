@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     'radix-vue/nuxt',
     '@nuxthq/studio',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@nuxtjs/color-mode',
   ],
   macros: {
     betterDefine: false,
@@ -41,5 +42,14 @@ export default defineNuxtConfig({
     ],
     lazy: true,
     langDir: 'locales',
+  },
+  colorMode: {
+    classSuffix: '',
+  },
+
+  $development: {
+    css: [
+      'vue-json-pretty/lib/styles.css',
+    ]
   },
 })
