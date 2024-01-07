@@ -19,6 +19,3 @@ Unlocking business value with reliable streaming from a trusted partner
 Get Demo
 ::
 ::
-
-###### [CORE COMPONENTS]{center}
-### [Unleashing the Potential in Sigma Streaming Platform]{center}
