@@ -2,6 +2,7 @@
 import { VideoPlayer } from '@videojs-player/vue'
 const { videos } = definePropsRefs<{
   videos: any[]
+  left?: boolean
 }>()
 
 
@@ -32,7 +33,14 @@ const currentIndex = computed(() => Math.round(currentTime.value / 2))
 
 <template>
   <section>
-    <slot />
+    <SectionTitle v-if="$slots.title || $slots.subtitle" :left="left">
+      <template #title>
+        <ContentSlot :use="$slots.title" unwrap="p" />
+      </template>
+      <template #subtitle>
+        <ContentSlot :use="$slots.subtitle" unwrap="p" />
+      </template>
+    </SectionTitle>
     <div class="flex gap-12px bg-accent px-24px py-32px rounded-8px ">
 
       <div class="grid gap-12px">
