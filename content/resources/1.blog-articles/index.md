@@ -1,6 +1,6 @@
 ---
 title: 'Blog Articles'
-icon: carbon:blog
+icon: ooui:articles-ltr
 ---
 # Blog Articles
 :icon{name="carbon:blog"}
