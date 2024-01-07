@@ -19,6 +19,7 @@ export default defineConfig({
   ],
   shortcuts: [
     ['flex-center', 'flex items-center justify-center'],
+    ['navigation-menu-trigger',   'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 hover:text-primary',]
   ],
   rules: [
   ],
@@ -99,43 +100,14 @@ export default defineConfig({
 
     animation: {
       keyframes: {
-        slideDownAndFade: '{from { opacity: 0; transform: translateY(-2px) } to {opacity: 1; transform: translateY(0)}}',
-        slideLeftAndFade: '{from { opacity: 0; transform: translateX(2px) } to {opacity: 1; transform: translateX(0)}}',
-        slideUpAndFade: '{from { opacity: 0; transform: translateY(2px) } to {opacity: 1; transform: translateY(0)}}',
-        slideRightAndFade: '{from { opacity: 0; transform: translateX(-2px) } to {opacity: 1; transform: translateX(0)}}',
-        enterFromRight: '{from { opacity: 0; transform: translateX(200px) } to {opacity: 1; transform: translateX(0)}}',
-        enterFromLeft: '{from { opacity: 0; transform: translateX(-200px) } to {opacity: 1; transform: translateX(0)}}',
-        exitToRight: '{from { opacity: 1; transform: translateX(0) } to {opacity: 0; transform: translateX(200px)}}',
-        exitToLeft: '{from { opacity: 1; transform: translateX(0) } to {opacity: 0; transform: translateX(-200px)}}',
-        scaleIn: '{from { opacity: 0; transform: rotateX(-10deg) scale(0.9) } to {opacity: 1; transform: rotateX(0deg) scale(1)}}',
-        scaleOut: '{from { opacity: 1; transform: rotateX(0deg) scale(1) } to {opacity: 0; transform: rotateX(-10deg) scale(0.95)}}',
         marquee: '{from { transform: translateX(0) } to {transform: translateX(calc(-100% - 2.5rem))}}',
         float: '{from { transform: rotate(-0.001deg) translate3d(15px, 0, 0) rotate(-0.001deg) } to {transform: rotate(360.001deg) translate3d(15px, 0, 0) rotate(-360.001deg)}}',
       },
       durations: {
-        slideDownAndFade: '400ms',
-        slideLeftAndFade: '400ms',
-        slideUpAndFade: '400ms',
-        slideRightAndFade: '400ms',
-        scaleIn: '300ms',
-        scaleOut: '300ms',
-        enterFromLeft: '350ms',
-        enterFromRight: '350ms',
-        exitToLeft: '350ms',
         marquee: '50s',
         float: '12s',
       },
       timingFns: {
-        slideDownAndFade: 'cubic-bezier(0.16, 1, 0.3, 1)',
-        slideLeftAndFade: 'cubic-bezier(0.16, 1, 0.3, 1)',
-        slideUpAndFade: 'cubic-bezier(0.16, 1, 0.3, 1)',
-        slideRightAndFade: 'cubic-bezier(0.16, 1, 0.3, 1)',
-        scaleIn: 'ease',
-        scaleOut: 'ease',
-        enterFromLeft: 'ease',
-        enterFromRight: 'ease',
-        exitToLeft: 'ease',
-        exitToRight: 'ease',
         marquee: 'linear',
         float: 'linear',
       },
