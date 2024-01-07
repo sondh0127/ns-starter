@@ -52,6 +52,12 @@ export default defineNuxtSchema({
           icon: 'i-mdi-github'
         })
       }
+    }),
+    docsLink: field({
+      type:'string',
+      title: 'Documents link',
+      description: 'Link to the documentation',
+      icon: 'i-mdi-book-open-page-variant'
     })
   }
 })
