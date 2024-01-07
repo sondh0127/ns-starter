@@ -2,6 +2,12 @@
 defineProps<{
   align?: 'left'
 }>()
+
+defineSlots<{
+  default?: () => any
+  subtitle?: () => any
+  title?: () => any
+}>()
 </script>
 
 <template>
