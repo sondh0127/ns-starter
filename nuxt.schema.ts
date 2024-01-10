@@ -1,16 +1,10 @@
 // nuxt.schema.ts
-// tags: [
-//   {
-//     slug: 'tag 1',
-//     name: 'Tag',
-//     color: '#000000',
-//   },
-//   {
-//     slug: 'tag 2',
-//     name: 'Tag',
-//     color: '#000000',
-//   }
-// ]
+// banner: {
+//   enabled: true,
+//   link: 'https://github.com/nuxt/nuxtjs.org',
+//   textLink: 'Register now',
+//   text: 'Now Available: Product Porfolio Management Solution',
+// }
 
 import { field, group } from '@nuxthq/studio/theme'
 
@@ -134,6 +128,37 @@ export default defineNuxtSchema({
             icon: 'i-mdi-palette'
           })
         }
+      }
+    }),
+    banner: group({
+      title: 'Banner',
+      description: 'Banner configuration',
+      icon: 'i-mdi-alert',
+      fields: {
+        enabled: field({
+          type: 'boolean',
+          title: 'Enabled',
+          description: 'Enable or disable the banner',
+          icon: 'i-mdi-alert'
+        }),
+        link: field({
+          type:'string',
+          title: 'Link',
+          description: 'Banner link',
+          icon: 'i-mdi-link-variant'
+        }),
+        textLink: field({
+          type:'string',
+          title: 'Text link',
+          description: 'Banner text link',
+          icon: 'i-mdi-link-variant'
+        }),
+        text: field({
+          type:'string',
+          title: 'Text',
+          description: 'Banner text',
+          icon: 'i-mdi-format-quote-close'
+        })
       }
     })
   }
