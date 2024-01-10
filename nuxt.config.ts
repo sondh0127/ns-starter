@@ -15,6 +15,17 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/color-mode',
   ],
+  app: {
+    head: {
+      script: [
+        {
+          src: '//fw-cdn.com/11221563/3935925.js',
+          async: true,
+          defer: true,
+        }
+      ]
+    }
+  },
   macros: {
     betterDefine: false,
   },
