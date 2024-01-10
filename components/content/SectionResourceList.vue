@@ -10,11 +10,11 @@ const swiperRef = ref()
 
 const spaceBetween = 24
 
-function next() {
+function prev() {
   swiperRef.value.swiper.slideNext()
 }
 
-function prev() {
+function next() {
   swiperRef.value.swiper.slidePrev()
 }
 </script>
@@ -32,7 +32,7 @@ function prev() {
   </section>
   <div class="my-10 gap-24px container">
     <swiper-container ref="swiperRef" class="swiper-config" :slides-per-view="3" :space-between="spaceBetween"
-      :centered-slides="true" :breakpoints="{
+      :breakpoints="{
         768: {
           slidesPerView: 3,
         },
