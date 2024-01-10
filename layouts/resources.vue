@@ -5,11 +5,109 @@ useHead({
     { name: 'twitter:card', content: 'summary_large_image' },
   ],
 })
+const { params } = useRoute()
+const slug = computed(() => params.slug.join('/'))
+console.log('[LOG] ~ params:', params)
+
+const { data: dataResourcesDir } = await useAsyncData('resources-list-dir', () => queryContent('resources').where({
+  $or: [
+    {
+      _dir: {
+        $eq: 'resources'
+      }
+    },
+    {
+      _dir: {
+        $eq: ''
+      }
+    }
+  ]
+}).find())
+
+const currentDir = computed(() => dataResourcesDir.value?.find(item => item._path === '/' + slug.value))
+
+const { data: dataResources } = await useAsyncData('resources-list-content', () => queryContent('resources').where({
+  $and: params.slug.length === 1 ? [
+    {
+      _dir: {
+        $ne: 'resources'
+      }
+    },
+
+    {
+      _dir: {
+        $ne: ''
+      }
+    }
+  ] : [
+    {
+      _dir: {
+        $eq: params.slug[params.slug.length - 1]
+      }
+    },
+  ]
+}).find())
+console.log('[LOG] ~ dataResources:', dataResources)
+
 </script>
 
 <template>
   <AppNavbar />
-  Resources
-  <slot />
+  <div class="flex container">
+    <div class="mt-120px w-1/4 flex-shrink-0 py-5 pr-10">
+      <h3 class="text-lg font-600">
+        Categories
+      </h3>
+      <div class="grid mx--2 mt-4 gap-2">
+
+        <NuxtLink v-for="item in dataResourcesDir" :key="item.to" exact-active-class="text-primary" :to="item._path"
+          class="flex cursor-pointer items-center justify-between gap-2 rounded-xl px-3 py-2 hover:bg-primary/10 hover:text-primary">
+          <div class="flex items-center gap-2">
+            <Icon :name="item.icon" class="size-5" />
+            <div>{{ item.title }}</div>
+          </div>
+          <div class="i-ri:arrow-right-line" />
+        </NuxtLink>
+      </div>
+
+      <hr class="my-5 h-px border-0 bg-gray-200 dark:bg-gray-700">
+
+      <!-- <template v-if="tags?.length">
+        <h3 class="text-lg font-600">
+          Tags
+        </h3>
+
+        <div v-if="categories?.length" class="mt-4 flex flex-wrap gap-2">
+          <template v-for="(category, index) in tags" :key="index">
+            <BlogsLabel class="text-12px !px-2 !py-1" :color="category.color" :to="getPath('/resources', '/tags', category.slug.current)">
+              {{ category.title }}
+            </BlogsLabel>
+          </template>
+        </div>
+      </template> -->
+    </div>
+    <div class="flex-1">
+      <h1 class="py-10 text-center text-4xl font-bold dark:text-white">
+        {{ currentDir?.title }}
+      </h1>
+      <div class="grid mt-5 gap-6 px-6 lg:grid-cols-2 lg:gap-4 xl:grid-cols-3 xl:gap-6 ">
+        <template v-if="!dataResources?.length">
+          <div class="col-span-3 flex-center flex-col py-10">
+            <div class="i-ri:box-1-line text-30px" />
+            <h2 class="mt-4 text-center text-2xl font-bold dark:text-white">
+              No data
+            </h2>
+          </div>
+        </template>
+        <template v-else>
+          <template v-for=" item in dataResources " :key="item._path">
+            <ResourceItem v-if="item.type === 'resource'" :item="item" />
+            <BlogItem v-else :item="item"  />
+          </template>
+        </template>
+      </div>
+      <!-- <slot /> -->
+    </div>
+  </div>
   <AppFooter />
 </template>

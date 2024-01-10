@@ -26,7 +26,8 @@
     "nuxt-icon": "^0.6.8",
     "video.js": "^8.9.0",
     "vue-json-pretty": "^2.3.0",
-    "@nuxtjs/color-mode": "^3.3.2"
+    "@nuxtjs/color-mode": "^3.3.2",
+    "swiper": "^11.0.5"
   },
   "dependencies": {
     "radix-vue": "^1.2.6"

@@ -2,7 +2,10 @@
 // const { data: products } = await useAsyncData('products', () => queryContent('products').only(['title', '_path']).find())
 const { data: products } = await useAsyncData('products', () => queryContent('products').find())
 const { data: engines } = await useAsyncData('engines', () => queryContent('engines').find())
-const { data: resources } = await useAsyncData('resources', () => queryContent('resources').find())
+const { data: dataNavigation } = await useAsyncData('dataNavigation', () => fetchContentNavigation())
+const resources = computed(() => dataNavigation.value?.find(item => item._path === '/resources')?.children)
+
+
 const appConfig = useAppConfig()
 const hasFeatureBlog = computed(() => appConfig.featuredBlog)
 </script>
@@ -99,9 +102,9 @@ const hasFeatureBlog = computed(() => appConfig.featuredBlog)
           </SNavigationMenuItem>
           <SNavigationMenuItem>
             <NuxtLink :to="appConfig.docsLink" external>
-              <SNavigationMenuLink  class="navigation-menu-trigger">
-              Documentation
-            </SNavigationMenuLink>
+              <SNavigationMenuLink class="navigation-menu-trigger">
+                Documentation
+              </SNavigationMenuLink>
             </NuxtLink>
 
           </SNavigationMenuItem>
