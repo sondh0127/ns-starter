@@ -68,7 +68,7 @@ const links = computed(() => item.value?.body.toc.links)
           </div> -->
         <BlogsAuthorCard v-if="item?.author" :author="item.author" />
       </article>
-      <div class="sticky top-0 w-full self-start md:w-256px">
+      <div class="sticky top-[calc(var(--header-height))] w-full self-start md:w-256px">
         <div class="mt-5 font-sans">
           <Toc class="bg-background border-border text-sm p-4 rounded-xl">
             <template #title>
