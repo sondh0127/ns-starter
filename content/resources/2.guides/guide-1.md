@@ -1,6 +1,7 @@
 ---
 title: 'Guide 1'
 icon: ooui:articles-ltr
+author: two
 ---
 # Guide 1
 ## Overview

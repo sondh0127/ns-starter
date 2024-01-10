@@ -1,5 +1,6 @@
 ---
 title: 'Blog 1'
+author: antfu
 ---
 # Blog 1
 # New Blog Post
