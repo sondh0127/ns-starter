@@ -3,6 +3,7 @@ title: 'Blog 1'
 author: antfu
 date: 2024-01-10
 thumbnail: /Capture_170819.png
+tags: tag 1, tag 2
 ---
 # New Blog Post
 

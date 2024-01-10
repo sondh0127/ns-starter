@@ -2,6 +2,7 @@
 title: 'Guide 1'
 icon: ooui:articles-ltr
 author: two
+tags: tag 1
 ---
 # Guide 1
 ## Overview
