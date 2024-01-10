@@ -14,7 +14,7 @@ body,
 #__nuxt {
   height: 100dvh;
   font-family: 'Inter', sans-serif;
-  @apply p-0 m-0 antialiased text-secondary;
+  @apply p-0 m-0 antialiased text-secondary scroll-smooth;
 }
 
 
@@ -100,6 +100,7 @@ h6, .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
 
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
   @apply block;
+  text-decoration: none !important;
 }
 
 h1 {
@@ -157,9 +158,5 @@ section>img {
 
 [right=true] {
   @apply block text-right;
-}
-
-a {
-  text-decoration: none !important;
 }
 </style>
