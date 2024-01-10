@@ -7,7 +7,6 @@ useHead({
 })
 const { params } = useRoute()
 const slug = computed(() => params.slug.join('/'))
-console.log('[LOG] ~ params:', params)
 
 const { data: dataResourcesDir } = await useAsyncData('resources-list-dir', () => queryContent('resources').where({
   $or: [
@@ -47,7 +46,6 @@ const { data: dataResources } = await useAsyncData('resources-list-content', () 
     },
   ]
 }).find())
-console.log('[LOG] ~ dataResources:', dataResources)
 
 </script>
 

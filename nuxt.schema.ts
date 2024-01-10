@@ -1,4 +1,17 @@
 // nuxt.schema.ts
+// authors: [
+//   {
+//     name: 'Ant',
+//     title: 'Creator',
+//     avatar: 'https://unavatar.io/antfu',
+//   },
+//   {
+//     name: 'Two',
+//     title: 'SE',
+//     avatar: 'https://unavatar.io/antfu',
+//   }
+// ]
+
 import { field, group } from '@nuxthq/studio/theme'
 
 export default defineNuxtSchema({
@@ -58,6 +71,35 @@ export default defineNuxtSchema({
       title: 'Documents link',
       description: 'Link to the documentation',
       icon: 'i-mdi-book-open-page-variant'
+    }),
+    authors: field({
+      type: 'array',
+      title: 'Authors',
+      description: 'List of authors',
+      icon: 'i-mdi-account-group',
+      items: {
+        type: 'object',
+        fields: {
+          name: field({
+            type:'string',
+            title: 'Name',
+            description: 'Author name',
+            icon: 'i-mdi-account'
+          }),
+          title: field({
+            type:'string',
+            title: 'Title',
+            description: 'Author title',
+            icon: 'i-mdi-account-star'
+          }),
+          avatar: field({
+            type:'string',
+            title: 'Avatar',
+            description: 'Avatar URL',
+            icon: 'i-mdi-account-circle'
+          })
+        }
+      }
     })
   }
 })
