@@ -29,7 +29,7 @@ const { item } = definePropsRefs<{
           </span>
         </NuxtLink>
         <SButton class="flex-shrink-0" variant="outline" size="icon">
-          <a class="i-ri:download-line text-14px text-" :href="`${item.media}?dl=`" />
+          <a class="i-ri:download-line text-14px" :download="item.media" :href="`${item.media}`" />
         </SButton>
       </div>
       <p v-if="item.description">
