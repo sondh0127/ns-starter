@@ -105,6 +105,14 @@ const hasFeatureBlog = computed(() => appConfig.featuredBlog)
             </NuxtLink>
 
           </SNavigationMenuItem>
+          <SNavigationMenuItem>
+            <NuxtLink to="https://thudomultimedia.com/" external>
+              <SNavigationMenuLink  class="navigation-menu-trigger">
+              About us
+            </SNavigationMenuLink>
+            </NuxtLink>
+
+          </SNavigationMenuItem>
         </SNavigationMenuList>
       </div>
       <div class="hidden justify-self-end gap-3 lg:flex">
