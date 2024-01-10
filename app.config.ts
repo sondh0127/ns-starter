@@ -36,5 +36,11 @@ export default defineAppConfig({
       name: 'Tag',
       color: '#000000',
     }
-  ]
+  ],
+  banner: {
+    enabled: true,
+    link: 'https://github.com/nuxt/nuxtjs.org',
+    textLink: 'Register now',
+    text: 'Now Available: Product Porfolio Management Solution',
+  }
 })

@@ -8,14 +8,17 @@ const resources = computed(() => dataNavigation.value?.find(item => item._path =
 
 const appConfig = useAppConfig()
 const hasFeatureBlog = computed(() => appConfig.featuredBlog)
+const showBanner = computed(() => ENABLED_BANNER.value ?? appConfig.banner.enabled)
 </script>
 
 <template>
-  <div class="sticky top-0 z-10 h-64px w-full bg-white shadow" dark="bg-trueGray-900">
+  <div class="sticky top-0 z-10 h-full w-full bg-white shadow" dark="bg-trueGray-900">
     <!-- <div md="hidden" class="h-full flex-center">
       <AppHeaderDrawer />
     </div> -->
-    <SNavigationMenu class="hidden w-full" md="grid w-full grid-cols-3 items-center container h-full xl:px-5 mx-auto">
+    <AppBanner v-show="showBanner"/>
+
+    <SNavigationMenu class="hidden w-full" md="grid w-full grid-cols-3 items-center container h-64px xl:px-5 mx-auto">
       <div class="w-full flex flex-wrap items-center justify-between lg:w-auto">
         <NuxtLink to="/" class="flex items-end gap-x-2 text-primary" dark="text-primary">
           <span>
