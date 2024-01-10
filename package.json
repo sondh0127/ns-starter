@@ -22,7 +22,7 @@
     "@vue-macros/nuxt": "^1.9.19",
     "class-variance-authority": "^0.7.0",
     "echarts": "^5.4.3",
-    "nuxt": "^3.9.0",
+    "nuxt": "^3.9.1",
     "nuxt-icon": "^0.6.8",
     "video.js": "^8.9.0",
     "vue-json-pretty": "^2.3.0",
