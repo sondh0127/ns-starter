@@ -9,10 +9,6 @@
 </template>
 
 <style>
-::root {
-  --header-height: 64px;
-}
-
 html,
 body,
 #__nuxt {
@@ -99,7 +95,7 @@ h4,
 h5,
 h6, .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
   @apply leading-snug lg:leading-tight xl:!leading-tight tracking-tight;
-  @apply scroll-mt-[calc(64px+48px)];
+  @apply scroll-mt-[calc(var(--header-height)+48px)];
 }
 
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {

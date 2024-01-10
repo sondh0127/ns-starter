@@ -8,6 +8,9 @@ const resources = computed(() => dataNavigation.value?.find(item => item._path =
 
 const appConfig = useAppConfig()
 const hasFeatureBlog = computed(() => appConfig.featuredBlog)
+const showBanner = computed(() => ENABLED_BANNER.value ?? appConfig.banner.enabled)
+useStyleTag(`#__nuxt { --header-height: ${showBanner.value ? 40 + 64 : 64}px; }`)
+
 </script>
 
 <template>
@@ -15,7 +18,9 @@ const hasFeatureBlog = computed(() => appConfig.featuredBlog)
     <!-- <div md="hidden" class="h-full flex-center">
       <AppHeaderDrawer />
     </div> -->
-    <SNavigationMenu class="hidden w-full" md="grid w-full grid-cols-3 items-center container h-full xl:px-5 mx-auto">
+    <AppBanner v-show="showBanner" />
+
+    <SNavigationMenu class="hidden w-full" md="grid w-full grid-cols-3 items-center container h-64px xl:px-5 mx-auto">
       <div class="w-full flex flex-wrap items-center justify-between lg:w-auto">
         <NuxtLink to="/" class="flex items-end gap-x-2 text-primary" dark="text-primary">
           <span>
@@ -110,9 +115,9 @@ const hasFeatureBlog = computed(() => appConfig.featuredBlog)
           </SNavigationMenuItem>
           <SNavigationMenuItem>
             <NuxtLink to="https://thudomultimedia.com/" external>
-              <SNavigationMenuLink  class="navigation-menu-trigger">
-              About us
-            </SNavigationMenuLink>
+              <SNavigationMenuLink class="navigation-menu-trigger">
+                About us
+              </SNavigationMenuLink>
             </NuxtLink>
 
           </SNavigationMenuItem>
