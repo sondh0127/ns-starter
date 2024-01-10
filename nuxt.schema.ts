@@ -1,14 +1,14 @@
 // nuxt.schema.ts
-// authors: [
+// tags: [
 //   {
-//     name: 'Ant',
-//     title: 'Creator',
-//     avatar: 'https://unavatar.io/antfu',
+//     slug: 'tag 1',
+//     name: 'Tag',
+//     color: '#000000',
 //   },
 //   {
-//     name: 'Two',
-//     title: 'SE',
-//     avatar: 'https://unavatar.io/antfu',
+//     slug: 'tag 2',
+//     name: 'Tag',
+//     color: '#000000',
 //   }
 // ]
 
@@ -103,6 +103,35 @@ export default defineNuxtSchema({
             title: 'Avatar',
             description: 'Avatar URL',
             icon: 'i-mdi-account-circle'
+          })
+        }
+      }
+    }),
+    tags: field({
+      type: 'array',
+      title: 'Tags',
+      description: 'List of tags',
+      icon: 'i-mdi-tag',
+      items: {
+        type: 'object',
+        fields: {
+          slug: field({
+            type:'string',
+            title: 'Slug',
+            description: 'Tag slug',
+            icon: 'i-mdi-tag'
+          }),
+          name: field({
+            type:'string',
+            title: 'Name',
+            description: 'Tag name',
+            icon: 'i-mdi-tag'
+          }),
+          color: field({
+            type:'string',
+            title: 'Color',
+            description: 'Tag color',
+            icon: 'i-mdi-palette'
           })
         }
       }

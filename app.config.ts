@@ -24,5 +24,17 @@ export default defineAppConfig({
       title: 'SE',
       avatar: 'https://unavatar.io/antfu',
     }
+  ],
+  tags: [
+    {
+      slug: 'tag 1',
+      name: 'Tag',
+      color: '#000000',
+    },
+    {
+      slug: 'tag 2',
+      name: 'Tag',
+      color: '#000000',
+    }
   ]
 })
