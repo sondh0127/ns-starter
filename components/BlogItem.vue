@@ -5,7 +5,7 @@ const { item } = definePropsRefs<{
 
 const appConfig = useAppConfig()
 
-const author = computed(() => appConfig.authors.find(a => a.slug === item.value.auth))
+const author = computed(() => appConfig.authors.find(a => a.slug === item.value.author))
 </script>
 
 <template>
@@ -45,8 +45,8 @@ const author = computed(() => appConfig.authors.find(a => a.slug === item.value.
                 {{ author.name }}
 
               </span>
-              <template v-if="item.author.bio">
-                <p class="text-xs [&_p]:!my-0">
+              <template v-if="author.title">
+                <p class="text-xs my-0">
                   {{ author.title }}
                 </p>
               </template>
