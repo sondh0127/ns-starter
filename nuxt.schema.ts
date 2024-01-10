@@ -80,6 +80,12 @@ export default defineNuxtSchema({
       items: {
         type: 'object',
         fields: {
+          slug: field({
+            type:'string',
+            title: 'Slug',
+            description: 'Author slug',
+            icon: 'i-mdi-account'
+          }),
           name: field({
             type:'string',
             title: 'Name',

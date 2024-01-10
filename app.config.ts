@@ -13,11 +13,13 @@ export default defineAppConfig({
   docsLink: 'https://github.com/docs',
   authors: [
     {
+      slug: 'antfu',
       name: 'Ant',
       title: 'Creator',
       avatar: 'https://unavatar.io/antfu',
     },
     {
+      slug: 'two',
       name: 'Two',
       title: 'SE',
       avatar: 'https://unavatar.io/antfu',
