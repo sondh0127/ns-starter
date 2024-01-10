@@ -47,6 +47,8 @@ const { data: dataResources } = await useAsyncData('resources-list-content', () 
   ]
 }).find())
 
+const appConfig = useAppConfig()
+const tags = computed(() => appConfig.tags)
 </script>
 
 <template>
@@ -70,19 +72,18 @@ const { data: dataResources } = await useAsyncData('resources-list-content', () 
 
       <hr class="my-5 h-px border-0 bg-gray-200 dark:bg-gray-700">
 
-      <!-- <template v-if="tags?.length">
+      <template v-if="tags?.length">
         <h3 class="text-lg font-600">
           Tags
         </h3>
 
-        <div v-if="categories?.length" class="mt-4 flex flex-wrap gap-2">
-          <template v-for="(category, index) in tags" :key="index">
-            <BlogsLabel class="text-12px !px-2 !py-1" :color="category.color" :to="getPath('/resources', '/tags', category.slug.current)">
-              {{ category.title }}
-            </BlogsLabel>
-          </template>
+        <div v-if="tags?.length" class="mt-4 flex flex-wrap gap-2">
+          <TagItem v-for="(item, index) in tags" :color="item.color" :key="index" :to="`/resources?tag=${item.slug}`">
+            {{ item.name }}
+          </TagItem>
+
         </div>
-      </template> -->
+      </template>
     </div>
     <div class="flex-1">
       <h1 class="py-10 text-center text-4xl font-bold dark:text-white">
@@ -100,7 +101,7 @@ const { data: dataResources } = await useAsyncData('resources-list-content', () 
         <template v-else>
           <template v-for=" item in dataResources " :key="item._path">
             <ResourceItem v-if="item.type === 'resource'" :item="item" />
-            <BlogItem v-else :item="item"  />
+            <BlogItem v-else :item="item" />
           </template>
         </template>
       </div>

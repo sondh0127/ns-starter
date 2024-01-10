@@ -28,6 +28,7 @@
     "nuxt-icon": "^0.6.8",
     "remark-reading-time": "^2.0.1",
     "swiper": "^11.0.5",
+    "tinycolor2": "^1.6.0",
     "video.js": "^8.9.0",
     "vue-json-pretty": "^2.3.0"
   },

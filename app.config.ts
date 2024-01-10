@@ -28,13 +28,13 @@ export default defineAppConfig({
   tags: [
     {
       slug: 'tag 1',
-      name: 'Tag',
-      color: '#000000',
+      name: 'Tag 1',
+      color: '#35c796',
     },
     {
       slug: 'tag 2',
-      name: 'Tag',
-      color: '#000000',
+      name: 'Tag 2',
+      color: '#bac71a',
     }
   ],
   banner: {
