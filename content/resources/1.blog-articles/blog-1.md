@@ -1,8 +1,9 @@
 ---
 title: 'Blog 1'
 author: antfu
+date: 2024-01-10
+thumbnail: /Capture_170819.png
 ---
-# Blog 1
 # New Blog Post
 
 ## Introduction

@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 const { path } = definePropsRefs<{ path: string }>()
-const { data } = await useAsyncData(`section-resource-item:${path.value}`, () => queryContent('resources').where({
+const { data: item } = await useAsyncData(`section-resource-item:${path.value}`, () => queryContent('resources').where({
   _path: {
     $eq: path.value
   }
-}).find())
-const item = computed(() => data.value?.[0])
+}).findOne())
 
 </script>
 

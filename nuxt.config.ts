@@ -14,7 +14,11 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     'nuxt-icon',
     '@nuxtjs/color-mode',
+    "@vueuse/nuxt"
   ],
+  content: {
+    markdown: { remarkPlugins: ['remark-reading-time'] },
+  },
   app: {
     head: {
       script: [

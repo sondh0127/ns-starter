@@ -11,7 +11,7 @@ const hasFeatureBlog = computed(() => appConfig.featuredBlog)
 </script>
 
 <template>
-  <div class="sticky top-0 z-10 h-64px w-full bg-white shadow" dark="bg-trueGray-900">
+  <div class="sticky top-0 z-10 h-$header-height w-full bg-white shadow" dark="bg-trueGray-900">
     <!-- <div md="hidden" class="h-full flex-center">
       <AppHeaderDrawer />
     </div> -->
