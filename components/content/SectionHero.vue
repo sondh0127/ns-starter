@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="relative w-full flex items-center justify-center" xl="w-1/2" lg="block w-1/2">
+    <div class="relative w-full min-h-370px flex items-center justify-center" xl="w-1/2" lg="block w-1/2">
       <Slot class="absolute inset-0 h-full w-full object-scale-down">
         <ContentSlot :use="$slots.image" unwrap="p" />
       </Slot>
