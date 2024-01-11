@@ -1,11 +1,7 @@
 <script setup lang="ts">
 const showDrawer = useShowDrawer()
 
-const { data: dataNavigation } = await useAsyncData('dataNavigation', () => fetchContentNavigation())
-const products = computed(() => dataNavigation.value?.find(item => item._path === '/products')?.children)
-const engines = computed(() => dataNavigation.value?.find(item => item._path === '/engines')?.children)
-const solutions = computed(() => dataNavigation.value?.find(item => item._path === '/solutions')?.children)
-const resources = computed(() => dataNavigation.value?.find(item => item._path === '/resources')?.children)
+const { products, engines, solutions, resources } = await useNavigation()
 
 </script>
 

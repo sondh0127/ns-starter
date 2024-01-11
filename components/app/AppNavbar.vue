@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-const { data: dataNavigation } = await useAsyncData('dataNavigation', () => fetchContentNavigation())
-const products = computed(() => dataNavigation.value?.find(item => item._path === '/products')?.children)
-const engines = computed(() => dataNavigation.value?.find(item => item._path === '/engines')?.children)
-const resources = computed(() => dataNavigation.value?.find(item => item._path === '/resources')?.children)
-const solutions = computed(() => dataNavigation.value?.find(item => item._path === '/solutions')?.children)
-
+const { products, engines, solutions, resources } = await useNavigation()
 
 const appConfig = useAppConfig()
 const hasFeatureBlog = computed(() => appConfig.featuredBlog)
@@ -102,7 +97,7 @@ useStyleTag(`#__nuxt { --header-height: ${showBanner.value ? 40 + 64 : 64}px; }`
             <SNavigationMenuTrigger>Solutions</SNavigationMenuTrigger>
             <SNavigationMenuContent>
               <div class="flex" md="w-screen-md">
-                <div class="grid grid-cols-2 gap-6 px-5 w-full" >
+                <div class="grid grid-cols-2 gap-6 px-5 w-full">
                   <div class="col-span-2 py-5">
                     <h1 class="text-lg font-600">
                       Our solutions

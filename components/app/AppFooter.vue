@@ -1,9 +1,5 @@
 <script lang="ts" setup>
-const { data: products } = await useAsyncData('products', () => queryContent('products').find())
-const { data: engines } = await useAsyncData('engines', () => queryContent('engines').find())
-const { data: dataNavigation } = await useAsyncData('dataNavigation', () => fetchContentNavigation())
-const resources = computed(() => dataNavigation.value?.find(item => item._path === '/resources')?.children)
-const solutions = computed(() => dataNavigation.value?.find(item => item._path === '/solutions')?.children)
+const { products, engines, solutions, resources } = await useNavigation()
 
 </script>
 
