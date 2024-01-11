@@ -4,6 +4,7 @@ const { data: products } = await useAsyncData('products', () => queryContent('pr
 const { data: engines } = await useAsyncData('engines', () => queryContent('engines').find())
 const { data: dataNavigation } = await useAsyncData('dataNavigation', () => fetchContentNavigation())
 const resources = computed(() => dataNavigation.value?.find(item => item._path === '/resources')?.children)
+const solutions = computed(() => dataNavigation.value?.find(item => item._path === '/solutions')?.children)
 
 
 const appConfig = useAppConfig()
@@ -21,12 +22,12 @@ useStyleTag(`#__nuxt { --header-height: ${showBanner.value ? 40 + 64 : 64}px; }`
     <AppBanner v-show="showBanner" />
 
     <SNavigationMenu class="hidden w-full" md="grid w-full grid-cols-3 items-center container h-64px xl:px-5 mx-auto">
-      <div class="w-full flex flex-wrap items-center justify-between lg:w-auto">
-        <NuxtLink to="/" class="flex items-end gap-x-2 text-primary" dark="text-primary">
+      <div class="flex flex-wrap items-center justify-between lg:w-auto flex-shrink-0">
+        <NuxtLink to="/" class="flex items-end gap-x-2 text-primary " dark="text-primary">
           <span>
             <img src="/logo_sigma.png" alt="LS" class="h-10 w-10">
           </span>
-          <div>
+          <div class="hidden lg:block">
             <svg class="w-88px text-#484848 dark:text-white" width="88" height="19" viewBox="0 0 88 19" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -92,6 +93,24 @@ useStyleTag(`#__nuxt { --header-height: ${showBanner.value ? 40 + 64 : 64}px; }`
                         {{ config?.featuredBlog.title }}
                       </span>
                     </NuxtLink>
+                  </div>
+                </div>
+              </div>
+            </SNavigationMenuContent>
+          </SNavigationMenuItem>
+          <SNavigationMenuItem>
+            <SNavigationMenuTrigger>Solutions</SNavigationMenuTrigger>
+            <SNavigationMenuContent>
+              <div class="flex" md="w-screen-md">
+                <div class="grid grid-cols-2 gap-6 px-5 w-full" >
+                  <div class="col-span-2 py-5">
+                    <h1 class="text-lg font-600">
+                      Our solutions
+                    </h1>
+                    <div class="my-2 h-1px bg-gray-200 dark:bg-trueGray-700" />
+                    <ul class="grid m-0 list-none gap-10px" md="grid-cols-2">
+                      <AppNavMenuItem v-for="item in solutions" :key="item.key" :to="item._path" v-bind="item" />
+                    </ul>
                   </div>
                 </div>
               </div>
