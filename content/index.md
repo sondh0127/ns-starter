@@ -15,8 +15,12 @@ Unlocking business value with reliable streaming from a trusted partner
 - Unlock potential: Secure hosting, flawless events, API integration. Revenue awaits.
 - Empower your stream: Transcode, Interact, Monetize. Experience the future.
 
+#cta
 ::button-link{href="/get-in-touch"}
 Get Demo
+::
+::button-link{href="/get-in-touch" white}
+Contact us
 ::
 ::
 
