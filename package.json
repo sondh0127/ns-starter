@@ -35,6 +35,7 @@
     "vue-json-pretty": "^2.3.0"
   },
   "dependencies": {
-    "radix-vue": "^1.2.6"
+    "radix-vue": "^1.2.6",
+    "vue3-marquee": "^4.1.0"
   }
 }

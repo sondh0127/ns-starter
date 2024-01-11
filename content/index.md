@@ -211,6 +211,16 @@ FAQ
 Answer your customers possible questions here, it will increase the conversion rate as well as support or chat requests.
 ::
 
+::section-marquee
+#title
+Image Marquee
+#default
+:marquee-item{img="https://sponsors.vuejs.org/images/vueschool.avif"}
+:marquee-item{img="https://sponsors.vuejs.org/images/vehikl.avif"}
+:marquee-item{img="https://sponsors.vuejs.org/images/dronahq.avif"}
+
+::
+
 ::section-cta
 #title
 Ready to Get Started?

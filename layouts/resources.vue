@@ -107,7 +107,7 @@ const tags = computed(() => appConfig.tags)
         </template>
         <template v-else>
           <template v-for=" item in dataResources " :key="item._path">
-            <ResourceItem v-if="item.type === 'resource'" :item="item" />
+            <ResourceItemImp v-if="item.type === 'resource'" :item="item" />
             <BlogItem v-else :item="item" />
           </template>
         </template>
