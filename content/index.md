@@ -108,15 +108,12 @@ Products
   ::
 ::
 
-
-::section-title
+::section-grid{col=3}
 #title
 What's included
 #subtitle
 HIGHLIGHTS FEATURES
-::
-
-::section-grid{col=3}
+#default
   ::grid-card{icon="material-symbols:audio-video-receiver-outline" left}
   #title
   Secure Video Hosting
@@ -160,15 +157,12 @@ HIGHLIGHTS FEATURES
   ::
 ::
 
-
-::section-title
+::section-grid{bg}
 #title
 Why customers love us?
 #subtitle
 TESTIMONIALS
-::
-
-::section-grid{bg}
+#default
   ::grid-item{icon="material-symbols:sensors"}
   #subtitle
   We’re inspired by our customers’s ideas and are fun to work with
@@ -217,7 +211,6 @@ Image Marquee
 :marquee-item{img="https://sponsors.vuejs.org/images/vueschool.avif"}
 :marquee-item{img="https://sponsors.vuejs.org/images/vehikl.avif"}
 :marquee-item{img="https://sponsors.vuejs.org/images/dronahq.avif"}
-
 ::
 
 ::section-cta
