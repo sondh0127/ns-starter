@@ -14,6 +14,9 @@
           <ContentSlot :use="$slots.subtitle" unwrap="p" />
         </h2>
         <slot />
+        <div class="flex gap-2">
+          <slot name="cta" />
+        </div>  
       </div>
     </div>
     <div class="relative w-full flex items-center justify-center" xl="w-1/2" lg="block w-1/2">
