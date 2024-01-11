@@ -48,8 +48,8 @@ const sheetVariants = cva(
     <DialogContent :class="sheetVariants({ side: props.side })" v-bind="{ ...props, ...emitsAsProps }">
       <slot />
 
-      <DialogClose class="absolute top-4 right-4 p-0.5 transition-colors rounded-md hover:bg-secondary">
-        <div class="text-muted-foreground i-ri:close-line h-4 w-4" />
+      <DialogClose class="absolute top-4 right-4 p-0.5 transition-colors group rounded-md hover:bg-primary/20">
+        <div class="text-muted-foreground group-hover:text-primary i-ri:close-line h-4 w-4" />
       </DialogClose>
     </DialogContent>
   </DialogPortal>
