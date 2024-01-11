@@ -3,12 +3,13 @@ const { data: products } = await useAsyncData('products', () => queryContent('pr
 const { data: engines } = await useAsyncData('engines', () => queryContent('engines').find())
 const { data: dataNavigation } = await useAsyncData('dataNavigation', () => fetchContentNavigation())
 const resources = computed(() => dataNavigation.value?.find(item => item._path === '/resources')?.children)
+const solutions = computed(() => dataNavigation.value?.find(item => item._path === '/solutions')?.children)
 
 </script>
 
 <template>
   <div class="mt-20 border-b border-t border-gray-200 dark:border-trueGray-700">
-    <footer class="grid grid-cols-4 gap-10 px-10 py-10 text-15px container">
+    <footer class="grid grid-cols-3 lg:grid-cols-5 gap-10 px-10 py-10 text-15px container">
       <div class="flex flex-col gap-8px">
         <div class="mb-8px cursor-default font-500 text-primary">
           Company
@@ -25,10 +26,8 @@ const resources = computed(() => dataNavigation.value?.find(item => item._path =
         <div class="mb-8px cursor-default font-500 text-primary">
           Resources
         </div>
-        <NuxtLink
-          v-for="item in resources" :key="item._path" hover="underline underline-primary text-primary"
-          :to="item._path"
-        >
+        <NuxtLink v-for="item in resources" :key="item._path" hover="underline underline-primary text-primary"
+          :to="item._path">
           {{ item.title }}
         </NuxtLink>
       </div>
@@ -38,10 +37,8 @@ const resources = computed(() => dataNavigation.value?.find(item => item._path =
           Products
         </div>
 
-        <NuxtLink
-          v-for="item in products" :key="item._path" hover="underline underline-primary text-primary"
-          :to="item._path"
-        >
+        <NuxtLink v-for="item in products" :key="item._path" hover="underline underline-primary text-primary"
+          :to="item._path">
           {{ item.title }}
         </NuxtLink>
       </div>
@@ -51,10 +48,19 @@ const resources = computed(() => dataNavigation.value?.find(item => item._path =
           Engines
         </div>
 
-        <NuxtLink
-          v-for="item in engines" :key="item._path" hover="underline underline-primary text-primary"
-          :to="item._path"
-        >
+        <NuxtLink v-for="item in engines" :key="item._path" hover="underline underline-primary text-primary"
+          :to="item._path">
+          {{ item.title }}
+        </NuxtLink>
+      </div>
+
+      <div class="flex flex-col gap-8px">
+        <div class="mb-8px cursor-default font-500 text-primary">
+          Solutions
+        </div>
+
+        <NuxtLink v-for="item in solutions" :key="item._path" hover="underline underline-primary text-primary"
+          :to="item._path">
           {{ item.title }}
         </NuxtLink>
       </div>
