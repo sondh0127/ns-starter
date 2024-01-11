@@ -37,33 +37,33 @@ CORE COMPONENTS
 ::
 
 ::grid-item
-::list-item{icon="material-symbols:camera"}
-#title
-Ingest
-#subtitle
-Secure video hosting with an all-in-one streaming platform
-::
+  ::list-item{icon="material-symbols:camera"}
+  #title
+  Ingest
+  #subtitle
+  Secure video hosting with an all-in-one streaming platform
+  ::
 
-::list-item{icon="material-symbols:pallet-outline"}
-#title
-Transcoder
-#subtitle
-Converts original audio, video and image signals into suitable, compatible formats to play on different receivers.
-::
+  ::list-item{icon="material-symbols:pallet-outline"}
+  #title
+  Transcoder
+  #subtitle
+  Converts original audio, video and image signals into suitable, compatible formats to play on different receivers.
+  ::
 
-::list-item{icon="material-symbols:package-2-outline"}
-#title
-Packager
-#subtitle
-Data encapsulation and encryption enables service providers to secure content through digital rights management.
-::
+  ::list-item{icon="material-symbols:package-2-outline"}
+  #title
+  Packager
+  #subtitle
+  Data encapsulation and encryption enables service providers to secure content through digital rights management.
+  ::
 
-::list-item{icon="material-symbols:home-storage-outline"}
-#title
-Origin
-#subtitle
-Perform transport of manifest and segment files using ABR technologies, such as Apple HLS and MPEG, DASH.
-::
+  ::list-item{icon="material-symbols:home-storage-outline"}
+  #title
+  Origin
+  #subtitle
+  Perform transport of manifest and segment files using ABR technologies, such as Apple HLS and MPEG, DASH.
+  ::
 ::
 ::
 
