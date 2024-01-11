@@ -1,14 +1,18 @@
 <script lang="ts" setup>
 import { VideoPlayer } from '@videojs-player/vue'
 const { videos } = definePropsRefs<{
-  videos: any[]
+  videos: string
   left?: boolean
 }>()
 
 
 
 const selectedIndex = ref(0)
-const video = computed(() => videos.value[selectedIndex.value].src)
+const video = asyncComputed(async () => {
+  // read videos json link
+  const _videos = await $fetch<any>(videos.value, { responseType: 'json' })
+  return _videos.value[selectedIndex.value].src
+})
 const metrics = await Promise.all(videos.value.map(video => $fetch<any>(video.metric, { responseType: 'json' })))
 const res = computed(() => metrics[selectedIndex.value])
 const currentTime = ref(1)
