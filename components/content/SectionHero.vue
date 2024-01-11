@@ -15,8 +15,8 @@
         </h2>
         <slot />
         <div class="flex gap-2">
-          <slot name="cta" />
-        </div>  
+          <ContentSlot :use="$slots.cta" unwrap="p" />
+        </div>
       </div>
     </div>
     <div class="relative w-full flex items-center justify-center" xl="w-1/2" lg="block w-1/2">
