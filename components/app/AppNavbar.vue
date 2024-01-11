@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-// const { data: products } = await useAsyncData('products', () => queryContent('products').only(['title', '_path']).find())
-const { data: products } = await useAsyncData('products', () => queryContent('products').find())
-const { data: engines } = await useAsyncData('engines', () => queryContent('engines').find())
 const { data: dataNavigation } = await useAsyncData('dataNavigation', () => fetchContentNavigation())
+const products = computed(() => dataNavigation.value?.find(item => item._path === '/products')?.children)
+const engines = computed(() => dataNavigation.value?.find(item => item._path === '/engines')?.children)
 const resources = computed(() => dataNavigation.value?.find(item => item._path === '/resources')?.children)
 const solutions = computed(() => dataNavigation.value?.find(item => item._path === '/solutions')?.children)
 
@@ -16,10 +15,11 @@ useStyleTag(`#__nuxt { --header-height: ${showBanner.value ? 40 + 64 : 64}px; }`
 
 <template>
   <div class="sticky top-0 z-10 h-$header-height w-full bg-white shadow" dark="bg-trueGray-900">
-    <!-- <div md="hidden" class="h-full flex-center">
-      <AppHeaderDrawer />
-    </div> -->
     <AppBanner v-show="showBanner" />
+
+    <div md="hidden" class=" py-12px flex-center">
+      <AppHeaderDrawer />
+    </div>
 
     <SNavigationMenu class="hidden w-full" md="grid w-full grid-cols-3 items-center container h-64px xl:px-5 mx-auto">
       <div class="flex flex-wrap items-center justify-between lg:w-auto flex-shrink-0">

@@ -6,7 +6,7 @@ const props = defineProps<DialogDescriptionProps & { class?: string }>()
 
 <template>
   <DialogDescription
-    :class="cn('text-sm text-muted-foreground', props.class)"
+    :class="'text-sm text-muted-foreground'"
     v-bind="props"
   >
     <slot />

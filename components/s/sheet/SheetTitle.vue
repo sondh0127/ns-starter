@@ -6,7 +6,7 @@ const props = defineProps<DialogTitleProps & { class?: string }>()
 
 <template>
   <DialogTitle
-    :class="cn('text-lg font-semibold text-foreground', props.class)"
+    :class="'text-lg font-semibold text-foreground'"
     v-bind="props"
   >
     <slot />

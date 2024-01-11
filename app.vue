@@ -1,4 +1,12 @@
 <script setup lang="ts">
+
+const showDrawer = useShowDrawer()
+
+useRouter().afterEach(() => setTimeout(() => {
+  showDrawer.value = false
+}, 50))
+
+
 </script>
 
 <template>

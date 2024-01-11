@@ -1,14 +1,18 @@
 <script setup lang="ts">
-const { data: categories, pending } = await useSanityData(allCategoryQuery)
-const { data: pages, pending: pendingPage } = await useSanityData(allPageQuery)
-
 const showDrawer = useShowDrawer()
+
+const { data: dataNavigation } = await useAsyncData('dataNavigation', () => fetchContentNavigation())
+const products = computed(() => dataNavigation.value?.find(item => item._path === '/products')?.children)
+const engines = computed(() => dataNavigation.value?.find(item => item._path === '/engines')?.children)
+const solutions = computed(() => dataNavigation.value?.find(item => item._path === '/solutions')?.children)
+const resources = computed(() => dataNavigation.value?.find(item => item._path === '/resources')?.children)
+
 </script>
 
 <template>
   <SSheet v-model:open="showDrawer">
     <SSheetTrigger as-child>
-      <img src="/logo_sigma.png" alt="LS" class="h-10 w-10 cursor-pointer">
+      <NuxtImg src="/logo_sigma.png" alt="LS" class="h-10 w-10 cursor-pointer"/>
     </SSheetTrigger>
     <SSheetContent>
       <!-- <SSheetHeader>
@@ -23,9 +27,8 @@ const showDrawer = useShowDrawer()
         </h1>
         <ul class="grid m-0 list-none gap-6px" md="grid-cols-2">
           <AppLinkDrawer
-            v-for="item in pages.products" :key="item.key"
-            :to="getPath('/products', item.slug.current)"
-            v-bind="item"
+            v-for="item in products" :key="item._id" :title="item.title"
+            :to="item._path" :icon="item.icon"
           />
         </ul>
         <div class="my-1 h-1px bg-gray-200 dark:bg-trueGray-700" />
@@ -34,9 +37,18 @@ const showDrawer = useShowDrawer()
         </h1>
         <ul class="grid m-0 list-none gap-6px" md="grid-cols-2">
           <AppLinkDrawer
-            v-for="item in pages.engines" :key="item.key"
-            :to="getPath('/products', item.slug.current)"
-            v-bind="item"
+            v-for="item in engines" :key="item._id" :title="item.title"
+            :to="item._path" :icon="item.icon"
+          />
+        </ul>
+        <div class="my-1 h-1px bg-gray-200 dark:bg-trueGray-700" />
+        <h1 class="text-base font-600">
+          Our solutions
+        </h1>
+        <ul class="grid m-0 list-none gap-6px" md="grid-cols-2">
+          <AppLinkDrawer
+            v-for="item in solutions" :key="item._id" :title="item.title"
+            :to="item._path" :icon="item.icon"
           />
         </ul>
 
@@ -47,10 +59,9 @@ const showDrawer = useShowDrawer()
         </h1>
 
         <ul class="grid grid-flow-row grid-cols-2 m-0 list-none gap-x-12px" md="w-500px">
-          <AppLinkDrawer title="All resources" :to="getPath('/resources')" />
           <AppLinkDrawer
-            v-for="item in categories" :key="item._id" :title="item.title"
-            :to="getPath('/resources', item.slug.current)" :icon="item.icon"
+            v-for="item in resources" :key="item._id" :title="item.title"
+            :to="item._path" :icon="item.icon"
           />
         </ul>
       </div>
